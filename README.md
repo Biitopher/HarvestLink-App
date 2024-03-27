@@ -7,8 +7,7 @@
 <h1>HarvestLink App</h1>
 <h5>“The bridge between the farmer’s produce and consumer’s table”</h5>
 <h2>Overview</h2>
-<p>The Harvestlink App is a mobile application designed to facilitate communication and transactions between farmers and consumers. It provides features for users to browse available products, place orders, communicate with farmers, and manage their profiles.</p><ul><strong>Project landing page:</strong>https://evanssese166.wixsite.com/harvestlink</ul>
-<ul><strong>Deployed Site:</strong>http://41.215.44.98:8080/</ul>
+<p>The Harvestlink App is a mobile application designed to facilitate communication and transactions between farmers and consumers. It provides features for users to browse available products, place orders, communicate with farmers, and manage their profiles.</p>
 <ul><strong>Author's LinkedIn:</strong><li>Grace Kamondo https://www.linkedin.com/in/grace-kamondo-/?=</li>
 <li>Evans Sese https://www.linkedin.com/in/evans-sese/</li></ul>
 <h2>Features</h2>
