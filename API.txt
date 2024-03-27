@@ -1,0 +1,23 @@
+APIs and Methods
+'/api/auth/login', { username, password };
+    POST: user login and registration
+`/api/user/${Id};
+    GET: retrieves profiles
+`/api/user/${Id}`, updatedData;
+    PUT: updates profile data
+`/api/user/${Id}`;
+    DELETE: removes profile data
+'/api/products';
+    GET: Lists available products
+ '/api/orders';
+    GET: Retrieves orders
+    POST: Creates a new orders
+    PUT: Updates an existing order.
+    DELETE: removes existing orders
+'/api/products', newProductData;
+    POST: Adds new products
+'/api/messages', { recipientId, message };
+    POST: handles messages between farmer and consumers
+    GET:  Retrieves messages.
+'/api/farmers/nearby', { userLocation };
+    GET: Retrieves farmers location
