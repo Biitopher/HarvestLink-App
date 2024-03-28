@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Index file """
+""" Index file that defines routes for user authentication"""
 
 from api.v1.views import app_views
 from api.v1.controllers.products import Products
