@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Manages and displays products alongside their images"""
 from api.v1.controllers import db_storage
 from models.farmers import Farmer
 from models.products import Product
