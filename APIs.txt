@@ -1,23 +1,36 @@
 APIs and Methods
-'/api/auth/login', { username, password };
+'/api/v1/login', { username, password };
     POST: user login and registration
-`/api/user/${Id};
-    GET: retrieves profiles
-`/api/user/${Id}`, updatedData;
-    PUT: updates profile data
-`/api/user/${Id}`;
-    DELETE: removes profile data
-'/api/products';
-    GET: Lists available products
- '/api/orders';
+'/api/v1/signup'
+    POST: signs up user;consumer and farmer
+'/api/v1/'
+    GET: all products
+'/api/v1/cart'
+    GET: retrieves the items in the cart
+    POST: updates the cart
+'api/v1/cart/add POST'
+    POST: Adds new product to the cart
+'/api/v1/cart/delete'
+    DELETE: Removes an item from the cart
+'/api/v1/orders GET'
     GET: Retrieves orders
-    POST: Creates a new orders
-    PUT: Updates an existing order.
-    DELETE: removes existing orders
-'/api/products', newProductData;
-    POST: Adds new products
-'/api/messages', { recipientId, message };
-    POST: handles messages between farmer and consumers
-    GET:  Retrieves messages.
-'/api/farmers/nearby', { userLocation };
-    GET: Retrieves farmers location
+/api/v1/place_order POST
+    POST: Consumer places an order
+'/api/v1/orders/cancel'
+    POST: Consumer cancels an order
+'/api/v1/products GET'
+    GET: Retrieves products of a logged in farmer'
+'/api/v1/products/add POST'
+    POST: Adds product by the farmer
+'/api/v1/products/update POST'
+    POST: updates farmer's products
+'/api/v1/products/delete'
+    DELETE: Removes product from farmers list
+'/api/v1/farmer/orders GET'
+    GET: Farmer retrives orders
+'/api/v1/farmer/orders/decline POST'
+    POST: Farmer declines an order
+'/api/v1/farmer/orders/accept POST'
+    POST: Farmer accepts an order
+'/api/v1/farmer/orders/deliver POST'
+    POST: Farmer delivers an order
