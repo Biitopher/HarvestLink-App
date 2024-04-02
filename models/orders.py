@@ -126,8 +126,9 @@ class Order(Base):
         try:
             # Get orders associated with the logged-in farmer
             orders = (
-                session.query(cls)
-                .filter_by(farmer_id=farmer_id)
+                session.query(cls, Consumer)
+                .join(Consumer, Order.consumer_id == Consumer.id)
+                .filter(cls.farmer_id == farmer_id)
                 .all()
             )
             print(orders)
