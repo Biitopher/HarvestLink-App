@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Index file that defines routes and their functions """
+""" Index file """
 
 from api.v1.views import app_views
 from api.v1.controllers.products import Products
@@ -14,7 +14,6 @@ def get_status():
     return jsonify({"status": "OK"})
 
 
-@app_views.route('/products')
 @app_views.route('/', methods=['GET'])
 def home():
     """Display all products in the market"""
