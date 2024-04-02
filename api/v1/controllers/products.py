@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Manages and displays products alongside their images"""
+
 from api.v1.controllers import db_storage
 from models.farmers import Farmer
 from models.products import Product
@@ -46,3 +46,36 @@ class Products:
                                  "product_image": product.image
                                  })
         return all_products
+
+    def list_farmer_products(self, farmer_id):
+        """List all products added by farmer"""
+        products = (
+            db_storage.get_session()
+            .query(Product, Farmer)
+            .join(Farmer, Product.farmer_id == Farmer.id)
+            .filter(Farmer.id == farmer_id)
+            .all()
+        )
+        farmer_products = []
+
+        for product, farmer in products:
+            """Find the first match in the product name"""
+            match = pattern.search(product.name)
+
+            if match:
+                image = match.group()
+                product.image = image
+            else:
+                product.image = 'Logo'
+
+            farmer_products.append({"id": product.id,
+                                    "name": product.name,
+                                    "category": product.category,
+                                    "price": product.price,
+                                    "location": product.location,
+                                    "quantity": product.quantity,
+                                    "farmer_id": farmer.id,
+                                    "farmer": farmer.name,
+                                    "product_image": product.image
+                                    })
+        return farmer_products
